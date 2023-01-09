@@ -46,9 +46,35 @@ function swapVariables(x, y){
 }
 
 function parseObject(anObject){
-    return [...anObject]
+    tab =[]
+    for (attribute of Object.entries(anObject)){
+        tab.push(...attribute)
+    }
+
+    return tab
 }
 
+function mergeObjects(...Objects){
+    return Object.assign(...Objects)
+}
+
+function sumArray(tabNum){
+    sum = 0
+    for (number of tabNum){
+        sum+=number
+    }
+
+    return sum
+}
+
+function sortObject(anObject){
+    tab = []
+    for (attr of Object.entries(anObject)){
+        tab.push(attr)
+    }
+
+    return  tab.sort()
+}
 
 // Appels
 
@@ -67,3 +93,14 @@ console.log(removeDupes([1,1,4,6,8,8,9,3,5,3,2,2]))
 console.log(swapVariables(5,12))
 
 console.log(parseObject({a:123,b:456,c:'test'}))
+
+console.log(mergeObjects(
+    {a:123,b:456},
+    {c:'789',d:'101112'}
+))
+
+console.log(sumArray([12,4,6,8]))
+
+console.log(sortObject(
+    {a:32,b:"La boule magique",c:true}
+))
