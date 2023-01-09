@@ -47,8 +47,8 @@ function swapVariables(x, y){
 
 function parseObject(anObject){
     tab =[]
-    for (attribute of Object.entries(anObject)){
-        tab.push(...attribute)
+    for (attribute of Object.values(anObject)){
+        tab.push(attribute)
     }
 
     return tab
