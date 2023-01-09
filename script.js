@@ -102,5 +102,5 @@ console.log(mergeObjects(
 console.log(sumArray([12,4,6,8]))
 
 console.log(sortObject(
-    {a:32,b:"La boule magique",c:true}
+    {b:32,c:"La boule magique",a:true}
 ))
